@@ -1,0 +1,69 @@
+.callme {
+  width: 100%;
+  height: 335px;
+  background-image: url("../../../images/callme-background.jpg");
+  background-repeat: no-repeat;
+  padding: 27px 37px 47px 37px;
+
+  &__title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+  }
+
+  &__form {
+    margin-top: 45px;
+    position: relative;
+  }
+  &__input {
+    width: 235px;
+    height: 45px;
+    padding-left: 50px;
+    background: #ffffff;
+    border-radius: 2px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+#callme__submit-button {
+  display: flex;
+  align-items: center;
+  width: 235px;
+  height: 45px;
+  margin-top: 19px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: $orange;
+  border-radius: 2px;
+  border: none;
+  & svg {
+    margin-right: 9px;
+  }
+}
+
+.avatar-svg {
+  position: absolute;
+  left: 7px;
+  top: 9px;
+}
+
+.phone-svg {
+  position: absolute;
+  left: 7px;
+  top: 67px;
+}
+
+.phone__input {
+  margin-top: 13px;
+}

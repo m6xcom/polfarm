@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 16px;
+  padding-top: 28px;
+}
+
+.mobile-menu {
+  margin-left: 137px;
+  padding-top: 10px;
+  &__button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    transition: fill 250ms ease-in-out;
+
+    &.active {
+      fill: #10499e;
+    }
+  }
+}

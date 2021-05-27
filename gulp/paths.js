@@ -4,21 +4,18 @@ module.exports = {
     css: "src/styles/sass/main.scss",
     js: "src/js/**/*.js",
     images: "src/images/**/*",
-    fonts: "src/fonts/**/*",
   },
   watch: {
     html: "src/**/*.html",
     css: "src/styles/sass/**/*.scss",
     js: "src/js/**/*.js",
     images: "src/images/**/*",
-    fonts: "src/fonts/**/*",
   },
   build: {
     html: "build/",
     css: "build/css",
     js: "build/js",
     images: "build/images",
-    fonts: "build/fonts",
   },
   inject: {
     html: "build/index.html",

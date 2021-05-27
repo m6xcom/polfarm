@@ -1,0 +1,76 @@
+.footer {
+  padding: 60px 52px 24px 52px;
+}
+
+.contacts-list {
+  list-style: none;
+  margin-top: 63px;
+  margin-bottom: 0px;
+  padding: 0;
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.footer-contacts {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  text-transform: lowercase;
+  color: #000000;
+
+  &_bold {
+    font-weight: 600;
+  }
+}
+
+.footer-iphone__icon {
+  position: absolute;
+  left: 50px;
+}
+
+.footer-viber__icon {
+  margin-left: 8px;
+}
+
+.footer-email {
+  margin-top: 47px;
+  padding-left: 15px;
+  &__icon {
+    position: absolute;
+    left: 43px;
+  }
+}
+
+.footer-calendar {
+  margin-top: 38px;
+  padding-left: 30px;
+  &__icon {
+    position: absolute;
+    left: 50px;
+  }
+}
+
+.footer-webmaestro__icon {
+  margin-top: 67px;
+  margin-left: 16px;
+}
+
+.footer-rights-reserved {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  color: #a79f9f;
+  margin-top: 45px;
+  margin-left: 16px;
+}
