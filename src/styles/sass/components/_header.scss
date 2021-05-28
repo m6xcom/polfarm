@@ -1,10 +1,15 @@
 header {
   display: flex;
   position: absolute;
-  width: 100%;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   padding-left: 15px;
   padding-right: 16px;
   padding-top: 28px;
+  z-index: 10;
 }
 
 .mobile-menu {
@@ -15,9 +20,8 @@ header {
     background-color: transparent;
     border: none;
     transition: fill 250ms ease-in-out;
-
-    &.active {
-      fill: #10499e;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

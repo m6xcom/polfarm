@@ -1,7 +1,7 @@
 .callme {
   width: 100%;
   height: 335px;
-  background-image: url("../../../images/callme-background.jpg");
+  background-image: url("../images/callme-background.jpg");
   background-repeat: no-repeat;
   padding: 27px 37px 47px 37px;
 
@@ -29,6 +29,23 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
+    color: #000101;
+
+    &::placeholder {
+      color: #a8a9aa;
+    }
+
+    &:not(:placeholder-shown) + .avatar-svg {
+      fill: #000000;
+    }
+    &:not(:placeholder-shown) + .phone-svg {
+      fill: #000000;
+    }
+    &:focus {
+      box-sizing: border-box;
+      outline: none;
+      border: 1px solid #10499e;
+    }
   }
 }
 
@@ -56,12 +73,14 @@
   position: absolute;
   left: 7px;
   top: 9px;
+  fill: $grey;
 }
 
 .phone-svg {
   position: absolute;
   left: 7px;
   top: 67px;
+  fill: $grey;
 }
 
 .phone__input {
