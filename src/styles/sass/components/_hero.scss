@@ -1,10 +1,28 @@
 .hero {
-  background-image: url("../images/hero-background.jpg");
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../images/mobile/hero-background.jpg");
   background-repeat: no-repeat;
   padding-top: 127px;
   padding-right: 22px;
   padding-left: 22px;
   height: 440px;
+
+  @include desktop {
+    background: linear-gradient(
+        277.21deg,
+        rgba(255, 255, 255, 0.7) 20.92%,
+        rgba(255, 255, 255, 0) 57.97%
+      ),
+      url("../images/desktop/hero-background-desktop.jpg");
+    height: 613px;
+    padding-top: 170px;
+    padding-right: 110px;
+    padding-left: 608px;
+  }
 
   &__title {
     font-style: normal;
@@ -13,8 +31,16 @@
     line-height: 39px;
     text-align: center;
     margin: 0;
-
     color: $dark-grey;
+
+    @include desktop {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 68px;
+      text-align: right;
+      color: $dark-grey;
+    }
   }
 
   &__button {
@@ -32,5 +58,11 @@
     line-height: 20px;
     text-transform: uppercase;
     color: #ffffff;
+
+    @include desktop {
+      margin-top: 25px;
+      margin-left: 282px;
+      margin-right: 0px;
+    }
   }
 }

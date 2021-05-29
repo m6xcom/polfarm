@@ -1,14 +1,49 @@
 <header>
   <a href="#">
-    <svg width="125" height="41">
-      <use href="./images/mobile-icons.svg#logo"></use>
+    <svg id="logo">
+      <use href="./images/mobile/mobile-icons.svg#logo"></use>
     </svg>
   </a>
   <div class="mobile-menu">
     <button type="button" class="mobile-menu__button" data-menu-button>
       <svg width="25" height="22.5" aria-label="Переключатель мобильного меню">
-        <use href="./images/mobile-icons.svg#mobile-menu"></use>
+        <use href="./images/mobile/mobile-icons.svg#mobile-menu"></use>
       </svg>
     </button>
+  </div>
+  <div class="desktop__header">
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__list__item"><a href="#">Про нас</a></li>
+        <li class="navigation__list__item"><a href="#">Товари</a></li>
+        <li class="navigation__list__item">
+          <a href="#">Доставка і оплата</a>
+        </li>
+        <li class="navigation__list__item"><a href="#">Відгуки покупців</a></li>
+      </ul>
+    </nav>
+    <ul class="lang-switch">
+      <li class="lang-switch__item lang_ua active"><a href="#">ua</a></li>
+      <li><span class="separator"></span></li>
+      <li class="lang-switch__item lang_ru"><a href="#">ru</a></li>
+    </ul>
+    <ul class="header-contacts__list">
+      <li class="header-contacts__list__item">
+        <a class="header-contacts" href="tel:+380664706090"
+          >066<span class="header-contacts_bold"> 470 60 90</span></a
+        >
+        <svg class="header-viber__icon" width="20" height="20">
+          <use href="./images/mobile/mobile-icons.svg#viber-footer"></use>
+        </svg>
+      </li>
+      <li class="header-contacts__list__item">
+        <a class="header-contacts" href="tel:+380967815577"
+          >096 <span class="header-contacts_bold">781 55 77</span></a
+        >
+        <svg class="header-viber__icon" width="20" height="20">
+          <use href="./images/mobile/mobile-icons.svg#viber-footer"></use>
+        </svg>
+      </li>
+    </ul>
   </div>
 </header>

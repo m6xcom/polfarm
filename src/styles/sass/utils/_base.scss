@@ -26,6 +26,9 @@ h6 {
   width: 320px;
   margin-right: auto;
   margin-left: auto;
+  @include desktop {
+    width: 1200px;
+  }
 }
 
 .button_hover:hover {
