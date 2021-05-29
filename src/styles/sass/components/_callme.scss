@@ -3,7 +3,20 @@
   height: 335px;
   background-image: url("../images/mobile/callme-background.jpg");
   background-repeat: no-repeat;
+  background-size: contain;
   padding: 27px 37px 47px 37px;
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px),
+    screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1199px) {
+    background-image: url(../images/mobile/callme-background@2x.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3) and (max-width: 1199px),
+    screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 1199px),
+    screen and (-o-min-device-pixel-ratio: 3/1) and (max-width: 1199px) {
+    background-image: url(../images/mobile/callme-background@3x.jpg);
+  }
 
   @include desktop {
     background-image: url("../images/desktop/callme-background.jpg");
