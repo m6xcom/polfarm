@@ -121,12 +121,14 @@
 .reviews__list {
   position: absolute;
   bottom: 86px;
+  right: 15px;
   display: flex;
   list-style: none;
   padding: 0;
 
   @include desktop {
     bottom: 97px;
+    right: 33px;
   }
   &__item {
     width: 130px;
@@ -137,10 +139,7 @@
       }
     }
     & svg {
-      margin-right: 5px;
-      @include desktop {
-        margin-right: 10px;
-      }
+      margin-right: 10px;
     }
     & a {
       display: flex;
@@ -201,6 +200,7 @@
     text-transform: uppercase;
     color: #ffffff;
     margin-left: 15px;
+    transition: all 250ms ease-in-out;
 
     @include desktop {
       margin-left: 26px;

@@ -88,22 +88,36 @@ header {
           line-height: 20px;
           color: #000000;
         }
-        &:hover:before {
+        &::before {
           @include desktop {
             content: "";
             display: block;
             width: 100%;
             height: 1px;
+            opacity: 0;
+            transition: opacity 250ms ease-in-out;
             background: #313131;
           }
         }
-        &:hover:after {
+        &:hover::before {
+          @include desktop {
+            opacity: 1;
+          }
+        }
+        &::after {
           @include desktop {
             content: "";
             display: block;
             width: 100%;
             height: 1px;
+            opacity: 0;
+            transition: opacity 250ms ease-in-out;
             background: #313131;
+          }
+        }
+        &:hover::after {
+          @include desktop {
+            opacity: 1;
           }
         }
       }
@@ -136,6 +150,7 @@ header {
       }
     }
     &.active a {
+      transition: color 250ms ease-in-out;
       color: #000000;
     }
   }
