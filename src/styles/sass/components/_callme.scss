@@ -21,11 +21,24 @@
   @include desktop {
     background-image: url("../images/desktop/callme-background.jpg");
     background-color: #b9dcea;
+    background-size: contain;
     background-position: right;
     height: 377px;
     padding-top: 42px;
     padding-left: 140px;
     padding-bottom: 40px;
+
+    @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+    screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px) {
+    background-image: url(../images/desktop/callme-background@2x.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+    screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1200px),
+    screen and (-o-min-device-pixel-ratio: 3/1) and (min-width: 1200px) {
+    background-image: url(../images/desktop/callme-background@3x.jpg);
+  }
   }
 
   &__title {

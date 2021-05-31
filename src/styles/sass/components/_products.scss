@@ -116,6 +116,12 @@
   height: 18px;
   right: 32px;
   top: 38px;
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .reviews__list {
