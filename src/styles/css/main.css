@@ -416,6 +416,10 @@ header {
   }
 }
 
+header > a {
+  height: 41px;
+}
+
 #logo {
   width: 125px;
   height: 41px;
