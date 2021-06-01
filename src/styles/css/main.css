@@ -460,8 +460,8 @@ header {
 }
 
 .mobile-menu_modal.active {
-  -webkit-transform: translateX(-70%);
-          transform: translateX(-70%);
+  -webkit-transform: translateX(-71%);
+          transform: translateX(-71%);
 }
 
 .mobile-navigation__list {
