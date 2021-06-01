@@ -6,7 +6,8 @@
     ),
     url("../images/mobile/hero-background.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center top;
   padding-top: 127px;
   padding-right: 22px;
   padding-left: 22px;
@@ -40,7 +41,7 @@
         rgba(255, 255, 255, 0) 57.97%
       ),
       url("../images/desktop/hero-background.jpg");
-    background-size: contain;
+    background-size: cover;
     height: 613px;
     padding-top: 170px;
     padding-right: 110px;
@@ -70,11 +71,13 @@
 
   &__title {
     font-style: normal;
+    width: 100%;
+    max-width: 400px;
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
     text-align: center;
-    margin: 0;
+    margin: 0 auto;
     color: $dark-grey;
 
     @include desktop {
@@ -88,11 +91,12 @@
   }
 
   &__button {
+    display: block;
     width: 200px;
     height: 45px;
     margin-top: 54px;
-    margin-left: 38px;
-    margin-right: 38px;
+    margin-left: auto;
+    margin-right: auto;
     border: none;
     background: $orange;
     border-radius: 2px;

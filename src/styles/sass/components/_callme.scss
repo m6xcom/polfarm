@@ -3,7 +3,8 @@
   height: 335px;
   background-image: url("../images/mobile/callme-background.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center right;
   padding: 27px 37px 47px 37px;
 
   @media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px),
@@ -21,7 +22,7 @@
   @include desktop {
     background-image: url("../images/desktop/callme-background.jpg");
     background-color: #b9dcea;
-    background-size: contain;
+    background-size: cover;
     background-position: right;
     height: 377px;
     padding-top: 42px;
@@ -29,19 +30,23 @@
     padding-bottom: 40px;
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
-    screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
-    screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px) {
-    background-image: url(../images/desktop/callme-background@2x.jpg);
-  }
+      screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
+      screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 1200px) {
+      background-image: url(../images/desktop/callme-background@2x.jpg);
+    }
 
-  @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
-    screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1200px),
-    screen and (-o-min-device-pixel-ratio: 3/1) and (min-width: 1200px) {
-    background-image: url(../images/desktop/callme-background@3x.jpg);
-  }
+    @media screen and (min-device-pixel-ratio: 3) and (min-width: 1200px),
+      screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1200px),
+      screen and (-o-min-device-pixel-ratio: 3/1) and (min-width: 1200px) {
+      background-image: url(../images/desktop/callme-background@3x.jpg);
+    }
   }
 
   &__title {
+    width: 100%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
     font-style: normal;
     font-weight: 600;
     font-size: 18px;
@@ -59,8 +64,13 @@
   }
 
   &__form {
+    width: 246px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 45px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 
     @include desktop {
       display: flex;

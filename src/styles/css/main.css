@@ -382,13 +382,12 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: absolute;
   overflow: hidden;
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
+  width: 100%;
   padding-left: 15px;
   padding-right: 16px;
   padding-top: 28px;
@@ -418,7 +417,8 @@ header {
 }
 
 .mobile-menu {
-  padding-left: 137px;
+  width: 25px;
+  margin-left: auto;
   padding-top: 10px;
 }
 
@@ -712,7 +712,8 @@ header {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url("../images/mobile/hero-background.jpg");
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url("../images/mobile/hero-background.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center top;
   padding-top: 127px;
   padding-right: 22px;
   padding-left: 22px;
@@ -736,7 +737,7 @@ header {
 @media (min-width: 1200px) {
   .hero {
     background: linear-gradient(277.21deg, rgba(255, 255, 255, 0.7) 20.92%, rgba(255, 255, 255, 0) 57.97%), url("../images/desktop/hero-background.jpg");
-    background-size: contain;
+    background-size: cover;
     height: 613px;
     padding-top: 170px;
     padding-right: 110px;
@@ -758,11 +759,13 @@ header {
 
 .hero__title {
   font-style: normal;
+  width: 100%;
+  max-width: 400px;
   font-weight: bold;
   font-size: 32px;
   line-height: 39px;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
   color: #313131;
 }
 
@@ -778,11 +781,12 @@ header {
 }
 
 .hero__button {
+  display: block;
   width: 200px;
   height: 45px;
   margin-top: 54px;
-  margin-left: 38px;
-  margin-right: 38px;
+  margin-left: auto;
+  margin-right: auto;
   border: none;
   background: #f66f0d;
   border-radius: 2px;
@@ -820,8 +824,10 @@ header {
 }
 
 .products__title {
-  margin-left: 33px;
-  margin-right: 33px;
+  width: 80%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 61px;
   font-style: normal;
   font-weight: 600;
@@ -843,6 +849,17 @@ header {
 }
 
 .products__list {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (290px)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 290px);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  grid-auto-rows: 454px;
+  grid-row-gap: 50px;
   margin-top: 27px;
   padding: 0;
   list-style: none;
@@ -861,7 +878,7 @@ header {
 .products__list__item {
   position: relative;
   height: 454px;
-  width: 100%;
+  width: 290px;
   padding-top: 37px;
   padding-bottom: 18px;
   padding-right: 15px;
@@ -936,10 +953,6 @@ header {
     padding-right: 30px;
     padding-bottom: 32px;
   }
-}
-
-.products__list__item:not(:first-child) {
-  margin-top: 50px;
 }
 
 @media (min-width: 1200px) {
@@ -1210,7 +1223,8 @@ header {
   height: 335px;
   background-image: url("../images/mobile/callme-background.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center right;
   padding: 27px 37px 47px 37px;
 }
 
@@ -1230,7 +1244,7 @@ header {
   .callme {
     background-image: url("../images/desktop/callme-background.jpg");
     background-color: #b9dcea;
-    background-size: contain;
+    background-size: cover;
     background-position: right;
     height: 377px;
     padding-top: 42px;
@@ -1252,6 +1266,10 @@ header {
 }
 
 .callme__title {
+  width: 100%;
+  max-width: 400px;
+  margin-right: auto;
+  margin-left: auto;
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -1271,8 +1289,18 @@ header {
 }
 
 .callme__form {
+  width: 246px;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 45px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 1200px) {
