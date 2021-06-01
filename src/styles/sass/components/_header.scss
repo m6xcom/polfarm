@@ -1,6 +1,7 @@
 header {
   display: flex;
   position: absolute;
+  overflow: hidden;
   width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -29,7 +30,7 @@ header {
 }
 
 .mobile-menu {
-  margin-left: 137px;
+  padding-left: 137px;
   padding-top: 10px;
   @include desktop {
     display: none;
@@ -41,6 +42,44 @@ header {
     transition: fill 250ms ease-in-out;
     &:hover {
       cursor: pointer;
+    }
+    &.active {
+      fill: #10499e;
+    }
+  }
+  &_modal {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    width: 160px;
+    background-color: #ffffff;
+    transform: translateX(100%);
+    transition: transform 250ms ease-in-out;
+    border-radius: 5px;
+
+    &.active {
+      transform: translateX(-70%);
+    }
+  }
+}
+
+.mobile-navigation__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  &__item {
+    & a {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 20px;
+      color: #000000;
+    }
+    &:not(:first-child) {
+      margin-top: 20px;
     }
   }
 }
@@ -137,6 +176,29 @@ header {
     margin-left: 45px;
     margin-top: 34px;
   }
+  &.mobile {
+    display: flex;
+    list-style: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 1px;
+    width: 58px;
+    margin-right: auto;
+    margin-left: auto;
+
+    & li:not(:first-child) {
+      margin-left: 7px;
+    }
+    & a {
+      text-decoration: none;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: $grey;
+    }
+  }
   &__item {
     & a {
       @include desktop {
@@ -156,12 +218,15 @@ header {
   }
 }
 .separator {
+  display: block;
+  margin-top: 2px;
+  height: 16px;
+  width: 1px;
+  background-color: #c4c4c4;
   @include desktop {
-    display: block;
     margin-left: 2px;
     width: 16px;
     height: 1px;
-    background-color: #c4c4c4;
   }
 }
 

@@ -383,6 +383,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  overflow: hidden;
   width: 320px;
   margin-left: auto;
   margin-right: auto;
@@ -417,7 +418,7 @@ header {
 }
 
 .mobile-menu {
-  margin-left: 137px;
+  padding-left: 137px;
   padding-top: 10px;
 }
 
@@ -437,6 +438,58 @@ header {
 
 .mobile-menu__button:hover {
   cursor: pointer;
+}
+
+.mobile-menu__button.active {
+  fill: #10499e;
+}
+
+.mobile-menu_modal {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  width: 160px;
+  background-color: #ffffff;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+  border-radius: 5px;
+}
+
+.mobile-menu_modal.active {
+  -webkit-transform: translateX(-70%);
+          transform: translateX(-70%);
+}
+
+.mobile-navigation__list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+}
+
+.mobile-navigation__list__item a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.mobile-navigation__list__item:not(:first-child) {
+  margin-top: 20px;
 }
 
 .desktop__header {
@@ -556,6 +609,33 @@ header {
   }
 }
 
+.lang-switch.mobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 1px;
+  width: 58px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.lang-switch.mobile li:not(:first-child) {
+  margin-left: 7px;
+}
+
+.lang-switch.mobile a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #7b7e7b;
+}
+
 @media (min-width: 1200px) {
   .lang-switch__item a {
     text-decoration: none;
@@ -574,13 +654,19 @@ header {
   color: #000000;
 }
 
+.separator {
+  display: block;
+  margin-top: 2px;
+  height: 16px;
+  width: 1px;
+  background-color: #c4c4c4;
+}
+
 @media (min-width: 1200px) {
   .separator {
-    display: block;
     margin-left: 2px;
     width: 16px;
     height: 1px;
-    background-color: #c4c4c4;
   }
 }
 
@@ -783,6 +869,63 @@ header {
   background: #ffffff;
   -webkit-box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+.products__list__item.backside {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.products__list__item_front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 37px;
+  padding-bottom: 18px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .products__list__item_front {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 32px;
+  }
+}
+
+.products__list__item_back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 37px;
+  padding-bottom: 18px;
+  padding-right: 15px;
+  padding-left: 15px;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  background-color: #ffffff;
+}
+
+@media (min-width: 1200px) {
+  .products__list__item_back {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 32px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -846,6 +989,20 @@ header {
 
 .products__list__item__image {
   width: 262px;
+}
+
+.product__icon {
+  position: absolute;
+  display: block;
+  height: 18px;
+  right: 32px;
+  top: 38px;
+  background-color: transparent;
+  border: none;
+}
+
+.product__icon:hover {
+  cursor: pointer;
 }
 
 .product__icon_turnback {
