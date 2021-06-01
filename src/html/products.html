@@ -1,63 +1,149 @@
 <section class="products" id="products">
   <h2 class="products__title">У нас найчастіше замовляють</h2>
   <ul class="products__list">
-    <li class="products__list__item">
-      <h3 class="products__list__item__title">Білобіл форте</h3>
-      <button type="button" class="product__icon_turnback">
-        <svg id="button_turn-back" width="20" height="18">
-          <use href="./images/mobile/mobile-icons.svg#product-turn"></use>
-        </svg>
-      </button type="button">
-      <picture>
-        <source
-          srcset="
-            ./images/desktop/bilobil.png 1x,
-            ./images/desktop/bilobil@2x.png 2x,
-            ./images/desktop/bilobil@3x.png 3x
-          "
-          media="(min-width:1200px)"
-        />
-        <img
-          class="products__list__item__image"
-          src="./images/mobile/bilobil.png"
-          srcset="
-            ./images/mobile/bilobil@2x.png 2x,
-            ./images/mobile/bilobil@3x.png 3x
-          "
-        />
-      </picture>
-      <ul class="reviews__list">
-        <li class="reviews__list__item">
-          <a href="#" target="_blank"
-            ><svg width="30" height="30">
-              <use href="./images/mobile/mobile-icons.svg#pdf-icon"></use>
-            </svg>
-            <p>Інструкція з використання</p>
-          </a>
-        </li>
-        <li class="reviews__list__item">
-          <a href="#" target="_blank"
-            ><svg width="30" height="30">
-              <use href="./images/mobile/mobile-icons.svg#youtube-icon"></use>
-            </svg>
-            <p>Відеоогляд</p>
-          </a>
-        </li>
-      </ul>
-      <div class="purchase-block">
-        <p class="purchase-block__price">
-          10367 <span class="purchase-block__currency">грн</span>
-        </p>
-        <button class="purchase-block__button button_hover" type="button">
-          <svg width="15" height="15">
-            <use href="./images/mobile/mobile-icons.svg#shopping-cart"></use>
+    <li class="products__list__item frontside">
+      <div class="products__list__item_front">
+        <h3 class="products__list__item__title">Білобіл форте</h3>
+        <button type="button"  class="product__icon">
+          <svg id="button_turn-back" width="20" height="18">
+            <use href="./images/mobile/mobile-icons.svg#product-turn"></use>
           </svg>
-          Замовити
+        </button type="button">
+        <picture>
+          <source srcset="
+                    ./images/desktop/bilobil.png 1x,
+                    ./images/desktop/bilobil@2x.png 2x,
+                    ./images/desktop/bilobil@3x.png 3x
+                  " media="(min-width:1200px)" />
+          <img class="products__list__item__image" src="./images/mobile/bilobil.png" srcset="
+                    ./images/mobile/bilobil@2x.png 2x,
+                    ./images/mobile/bilobil@3x.png 3x
+                  " />
+        </picture>
+        <ul class="reviews__list">
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#pdf-icon"></use>
+              </svg>
+              <p>Інструкція з використання</p>
+            </a>
+          </li>
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#youtube-icon"></use>
+              </svg>
+              <p>Відеоогляд</p>
+            </a>
+          </li>
+        </ul>
+        <div class="purchase-block">
+          <p class="purchase-block__price">
+            10367 <span class="purchase-block__currency">грн</span>
+          </p>
+          <button class="purchase-block__button button_hover" type="button">
+            <svg width="15" height="15">
+              <use href="./images/mobile/mobile-icons.svg#shopping-cart"></use>
+            </svg>
+            Замовити
+          </button>
+        </div>
+      </div>
+      <div class="products__list__item_back">
+        <h3 class="products__list__item__title">Білобіл форте</h3>
+        <button type="button" id="back-to-front" class="product__icon_turnback">
+          <svg id="button_turn-back" width="20" height="18">
+            <use href="./images/mobile/mobile-icons.svg#product-turn-back"></use>
+          </svg>
         </button>
+        <div class="product__description-block">
+          <svg width="20" height="20">
+            <use href="./images/mobile/mobile-icons.svg#success"></use>
+          </svg>
+          <p class="in-stock__text">В наявності</p>
+          <p class="product__description">
+            Препарат Билобил® форте является препаратом растительного
+            происхождения.<br /><br />
+            Повышает устойчивость организма к гипоксии, особенно тканей головного
+            мозга.
+          </p>
+        </div>
+        <ul class="reviews__list">
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#pdf-icon"></use>
+              </svg>
+              <p>Інструкція з використання</p>
+            </a>
+          </li>
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#youtube-icon"></use>
+              </svg>
+              <p>Відеоогляд</p>
+            </a>
+          </li>
+        </ul>
+        <div class="purchase-block">
+          <p class="purchase-block__price">
+            10367 <span class="purchase-block__currency">грн</span>
+          </p>
+          <button class="purchase-block__button button_hover" type="button">
+            <svg width="15" height="15">
+              <use href="./images/mobile/mobile-icons.svg#shopping-cart"></use>
+            </svg>
+            Замовити
+          </button>
+        </div>
       </div>
     </li>
-    <li class="products__list__item">
-      <h3 class="products__list__item__title">Білобіл форте</h3>
+    <li class="products__list__item backside">
+      <div class="products__list__item_front">
+        <h3 class="products__list__item__title">Білобіл форте</h3>
+        <button type="button" class="product__icon">
+          <svg id="button_turn-back" width="20" height="18">
+            <use href="./images/mobile/mobile-icons.svg#product-turn"></use>
+          </svg>
+        </button type="button">
+        <picture>
+          <source srcset="
+                          ./images/desktop/bilobil.png 1x,
+                          ./images/desktop/bilobil@2x.png 2x,
+                          ./images/desktop/bilobil@3x.png 3x
+                        " media="(min-width:1200px)" />
+          <img class="products__list__item__image" src="./images/mobile/bilobil.png" srcset="
+                          ./images/mobile/bilobil@2x.png 2x,
+                          ./images/mobile/bilobil@3x.png 3x
+                        " />
+        </picture>
+        <ul class="reviews__list">
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#pdf-icon"></use>
+              </svg>
+              <p>Інструкція з використання</p>
+            </a>
+          </li>
+          <li class="reviews__list__item">
+            <a href="#" target="_blank"><svg width="30" height="30">
+                <use href="./images/mobile/mobile-icons.svg#youtube-icon"></use>
+              </svg>
+              <p>Відеоогляд</p>
+            </a>
+          </li>
+        </ul>
+        <div class="purchase-block">
+          <p class="purchase-block__price">
+            10367 <span class="purchase-block__currency">грн</span>
+          </p>
+          <button class="purchase-block__button button_hover" type="button">
+            <svg width="15" height="15">
+              <use href="./images/mobile/mobile-icons.svg#shopping-cart"></use>
+            </svg>
+            Замовити
+          </button>
+        </div>
+      </div>
+      <div class="products__list__item_back"><h3 class="products__list__item__title">Білобіл форте</h3>
       <button type="button" class="product__icon_turnback">
         <svg id="button_turn-back" width="20" height="18">
           <use href="./images/mobile/mobile-icons.svg#product-turn-back"></use>
@@ -77,16 +163,14 @@
       </div>
       <ul class="reviews__list">
         <li class="reviews__list__item">
-          <a href="#" target="_blank"
-            ><svg width="30" height="30">
+          <a href="#" target="_blank"><svg width="30" height="30">
               <use href="./images/mobile/mobile-icons.svg#pdf-icon"></use>
             </svg>
             <p>Інструкція з використання</p>
           </a>
         </li>
         <li class="reviews__list__item">
-          <a href="#" target="_blank"
-            ><svg width="30" height="30">
+          <a href="#" target="_blank"><svg width="30" height="30">
               <use href="./images/mobile/mobile-icons.svg#youtube-icon"></use>
             </svg>
             <p>Відеоогляд</p>
@@ -104,6 +188,8 @@
           Замовити
         </button>
       </div>
+    </div>
+      
     </li>
     <li class="products__list__item">
       <h3 class="products__list__item__title">Моваліс</h3>
