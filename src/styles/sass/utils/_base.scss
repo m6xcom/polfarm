@@ -29,10 +29,23 @@ h6 {
   margin-left: auto;
   @include desktop {
     width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.desktop-container {
+  @include desktop {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .button_hover:hover {
   background: #f94d03;
   cursor: pointer;
+}
+svg {
+  pointer-events: none;
 }

@@ -34,12 +34,26 @@ h6 {
 @media (min-width: 1200px) {
   .container {
     width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .desktop-container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 .button_hover:hover {
   background: #f94d03;
   cursor: pointer;
+}
+
+svg {
+  pointer-events: none;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -396,7 +410,6 @@ header {
 
 @media (min-width: 1200px) {
   header {
-    width: 1200px;
     padding-left: 45px;
     padding-top: 19px;
     padding-right: 0px;
@@ -501,9 +514,8 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    padding-right: 65px;
     height: 98px;
-    margin-left: 80px;
     background: rgba(255, 255, 255, 0.7);
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
@@ -720,40 +732,45 @@ header {
   height: 440px;
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1199px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 649px), screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 649px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (max-width: 649px) {
   .hero {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url(../images/mobile/hero-background@2x.jpg);
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../images/mobile/hero-background@2x.jpg);
   }
 }
 
-@media screen and (min-device-pixel-ratio: 3) and (max-width: 1199px), screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 1199px), screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 1199px) {
+@media screen and (min-device-pixel-ratio: 3) and (max-width: 649px), screen and (-webkit-min-device-pixel-ratio: 3) and (max-width: 649px), screen and (-o-min-device-pixel-ratio: 3 / 1) and (max-width: 649px) {
   .hero {
     background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.3)), to(rgba(255, 255, 255, 0.3))), url(../images/mobile/hero-background@3x.jpg);
     background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url(../images/mobile/hero-background@3x.jpg);
   }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 650px) {
   .hero {
     background: linear-gradient(277.21deg, rgba(255, 255, 255, 0.7) 20.92%, rgba(255, 255, 255, 0) 57.97%), url("../images/desktop/hero-background.jpg");
     background-size: cover;
-    height: 613px;
-    padding-top: 170px;
-    padding-right: 110px;
-    padding-left: 608px;
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 650px), screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 650px), screen and (-o-min-device-pixel-ratio: 2 / 1) and (min-width: 650px) {
   .hero {
     background-image: linear-gradient(277.21deg, rgba(255, 255, 255, 0.7) 20.92%, rgba(255, 255, 255, 0) 57.97%), url(../images/desktop/hero-background@2x.jpg);
   }
 }
 
-@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 3) and (min-width: 1200px), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 3) and (min-width: 1200px), screen and (min-width: 1200px) and (-o-min-device-pixel-ratio: 3 / 1) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 3) and (min-width: 992px), screen and (-webkit-min-device-pixel-ratio: 3) and (min-width: 992px), screen and (-o-min-device-pixel-ratio: 3 / 1) and (min-width: 992px) {
   .hero {
     background-image: linear-gradient(277.21deg, rgba(255, 255, 255, 0.7) 20.92%, rgba(255, 255, 255, 0) 57.97%), url(../images/desktop/hero-background@3x.jpg);
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    height: 613px;
+    padding-top: 170px;
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
 
@@ -771,12 +788,14 @@ header {
 
 @media (min-width: 1200px) {
   .hero__title {
+    max-width: 482px;
     font-style: normal;
     font-weight: bold;
     font-size: 56px;
     line-height: 68px;
     text-align: right;
     color: #313131;
+    margin-right: 0px;
   }
 }
 
@@ -803,7 +822,7 @@ header {
 @media (min-width: 1200px) {
   .hero__button {
     margin-top: 25px;
-    margin-left: 282px;
+    margin-left: auto;
     margin-right: 0px;
   }
 }
@@ -818,8 +837,12 @@ header {
 
 @media (min-width: 1200px) {
   .products {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 75px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 
@@ -839,6 +862,7 @@ header {
 
 @media (min-width: 1200px) {
   .products__title {
+    max-width: 578px;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
@@ -861,6 +885,7 @@ header {
   grid-auto-rows: 454px;
   grid-row-gap: 50px;
   margin-top: 27px;
+  margin-bottom: 0px;
   padding: 0;
   list-style: none;
 }
@@ -868,10 +893,11 @@ header {
 @media (min-width: 1200px) {
   .products__list {
     margin-top: 50px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 380px 380px 350px;
-        grid-template-columns: 380px 380px 350px;
+    -ms-grid-columns: 350px 350px 350px;
+        grid-template-columns: 350px 350px 350px;
+    grid-auto-rows: 480px;
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
   }
 }
 
@@ -952,18 +978,6 @@ header {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 32px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .products__list__item:not(:first-child) {
-    margin-top: 0px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .products__list__item:nth-child(n + 4) {
-    margin-top: 30px;
   }
 }
 
@@ -1214,10 +1228,6 @@ header {
   color: #000000;
 }
 
-#button_turn-back:hover {
-  cursor: pointer;
-}
-
 .callme {
   width: 100%;
   height: 335px;
@@ -1247,9 +1257,7 @@ header {
     background-size: cover;
     background-position: right;
     height: 377px;
-    padding-top: 42px;
-    padding-left: 140px;
-    padding-bottom: 40px;
+    padding: 0;
   }
 }
 
@@ -1280,11 +1288,14 @@ header {
 
 @media (min-width: 1200px) {
   .callme__title {
+    max-width: 492px;
     font-style: normal;
     font-weight: 600;
     font-size: 36px;
     line-height: 44px;
     width: 492px;
+    margin-right: auto;
+    margin-left: 0px;
   }
 }
 
@@ -1316,6 +1327,8 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: 0px;
+    margin-right: auto;
   }
 }
 
@@ -1417,6 +1430,14 @@ header {
 
 .phone__input {
   margin-top: 13px;
+}
+
+@media (min-width: 1200px) {
+  .callme-container {
+    padding-top: 42px;
+    padding-left: 140px;
+    padding-bottom: 40px;
+  }
 }
 
 .footer {

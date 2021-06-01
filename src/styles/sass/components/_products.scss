@@ -5,8 +5,10 @@
   background: linear-gradient(180deg, rgba(251, 248, 248, 0) 0%, #fafafa 100%);
 
   @include desktop {
-    padding-left: 45px;
-    padding-right: 45px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 75px;
+    height: fit-content;
   }
 
   &__title {
@@ -23,6 +25,7 @@
     color: #000000;
 
     @include desktop {
+      max-width: 578px;
       font-style: normal;
       font-weight: 600;
       font-size: 36px;
@@ -40,13 +43,16 @@
     grid-auto-rows: 454px;
     grid-row-gap: 50px;
     margin-top: 27px;
+    margin-bottom: 0px;
     padding: 0;
     list-style: none;
 
     @include desktop {
       margin-top: 50px;
-      display: grid;
-      grid-template-columns: 380px 380px 350px;
+      grid-template-columns: 350px 350px 350px;
+      grid-auto-rows: 480px;
+      grid-row-gap: 30px;
+      grid-column-gap: 30px;
     }
 
     &__item {
@@ -110,20 +116,6 @@
         padding-left: 30px;
         padding-right: 30px;
         padding-bottom: 32px;
-      }
-
-      &:not(:first-child) {
-        // margin-top: 50px;
-
-        @include desktop {
-          margin-top: 0px;
-        }
-      }
-
-      &:nth-child(n + 4) {
-        @include desktop {
-          margin-top: 30px;
-        }
       }
 
       &__title {
@@ -329,8 +321,4 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-}
-
-#button_turn-back:hover {
-  cursor: pointer;
 }

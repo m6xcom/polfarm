@@ -25,9 +25,7 @@
     background-size: cover;
     background-position: right;
     height: 377px;
-    padding-top: 42px;
-    padding-left: 140px;
-    padding-bottom: 40px;
+    padding: 0;
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px),
       screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 1200px),
@@ -55,11 +53,14 @@
     color: #000000;
 
     @include desktop {
+      max-width: 492px;
       font-style: normal;
       font-weight: 600;
       font-size: 36px;
       line-height: 44px;
       width: 492px;
+      margin-right: auto;
+      margin-left: 0px;
     }
   }
 
@@ -77,6 +78,8 @@
       flex-direction: column;
       width: 492px;
       align-items: center;
+      margin-left: 0px;
+      margin-right: auto;
     }
   }
   &__input {
@@ -153,4 +156,12 @@
 
 .phone__input {
   margin-top: 13px;
+}
+
+.callme-container {
+  @include desktop {
+    padding-top: 42px;
+    padding-left: 140px;
+    padding-bottom: 40px;
+  }
 }
